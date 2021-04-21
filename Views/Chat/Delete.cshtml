@@ -1,0 +1,49 @@
+﻿@model Module5.Models.Chat
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Supprimer</h2>
+
+<h3>Confirmer la suppression</h3>
+<div>
+    <h4>Chat</h4>
+    <hr />
+    <div>
+        <span>
+            @Html.DisplayNameFor(model => model.Nom)
+        </span>
+
+        <span>
+            @Html.DisplayFor(model => model.Nom)
+        </span>
+
+        <span>
+            @Html.DisplayNameFor(model => model.Age)
+        </span>
+
+        <span>
+            @Html.DisplayFor(model => model.Age)
+        </span>
+
+        <span>
+            @Html.DisplayNameFor(model => model.Couleur)
+        </span>
+
+        <span>
+            @Html.DisplayFor(model => model.Couleur)
+        </span>
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions">
+            <input type="submit" value="Supprimer" class="btn btn-danger" /> 
+            @Html.ActionLink("Retour", "Index", new { @class = "btn btn-info" })
+        </div>
+    }
+</div>

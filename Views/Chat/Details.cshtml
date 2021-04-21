@@ -1,0 +1,34 @@
+﻿@model Module5.Models.Chat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details</h1>
+<div>
+    <h4>Chat</h4>
+    <hr />
+    <div>
+        <span>
+            @Html.DisplayNameFor(model => model.Nom)
+        </span>
+        <span>
+            @Html.DisplayFor(model => model.Nom)
+        </span>
+        <span>
+            @Html.DisplayNameFor(model => model.Age)
+        </span>
+        <span>
+            @Html.DisplayFor(model => model.Age)
+        </span>
+        <span>
+            @Html.DisplayNameFor(model => model.Couleur)
+        </span>
+        <span>
+            @Html.DisplayFor(model => model.Couleur)
+        </span>
+        </div>
+</div>
+<p>
+    @Html.ActionLink("Retour", "Index")
+</p>
